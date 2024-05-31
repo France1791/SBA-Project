@@ -45,6 +45,9 @@ const menuLinks = [
  // topMenuEl.style.backgroundColor = topMenuColor;
   
   topMenuEl.classList = 'flex-around';
+  topMenuEl.style.fontFamily = 'Calibri';
+  topMenuEl.style.fontSize = '25px';
+  topMenuEl.style.height = '100%';
 
   for( let i = 0; i < menuLinks.length; i++){
     const menuDoc = document.createElement('a');
