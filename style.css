@@ -32,6 +32,7 @@ body{
     display:flex;
     justify-content:space-around;
     margin-top: 5%;
+    
 }
 
 #top-menu {
@@ -41,7 +42,7 @@ body{
     background-color: palevioletred;
 }
 
-.img1{
+.img {
     /* background-color: white; */
     width: 300px;
     height: 300px;

@@ -61,26 +61,27 @@ console.log(wholePage);
 
 const data =[
     {name:"Latin Beef Stew" , 
-        description: "Vuiojjmjj",
-    }{
-        name:
-        description:
-    }
+        description:'https://gypsyplate.com/puerto-rican-carne-guisada/#recipe-card'
+    },
     {
-        name:
-        description:
-    }
+        name: "Jamaican Curry Chicken",
+        description:"https://gypsyplate.com/jamaican-curry-chicken/#recipe-card"
+    },
     {
-        name:
-        description:
-    }
+        name:"Ropa Vieja (Cuba National Dish)",
+        description:"https://gypsyplate.com/ropa-vieja/#ropa-vieja"
+    },
     {
-        name:
-        description:
-    }
+        name:"Rasta Pasta",
+        description:"https://gypsyplate.com/rasta-pasta/#recipe-card"
+    },
     {
-        name:
-        description:
+        name:"Bahamian Boiled Fish",
+        description:"https://gypsyplate.com/bahamian-boiled-fish/#bahamian-boiled-fish"
+    },
+    {
+        name:"Tostones",
+        description:"https://gypsyplate.com/tostones/#recipe-card"
     }
 ]
 
@@ -89,25 +90,32 @@ const recipeEl = document.getElementById("recipes");
 const images = document.querySelectorAll("img")
 console.log(images)
 
-recipeEl.addEventListener("click", (event) => {
-    if(event.target === images[0]){
-        const divEl =  event.target.parentElement;
-        images[0].style.transform = "rotateY(180deg)";
-        setTimeout(()=> {
-            event.target.parentElement.innerHTML = "";
-            const h2El = document.createElement("h2");
-            h2El.textContent = data[0].name;
-            divEl.append(h2El)
-            const pEl =  document.createElement("p");
-            pEl.textContent = data[0].description;
-            divEl.append(pEl)
-            divEl.style.background = "white";
-        }, 2000)
+
+for(let i = 0; i < data.length; i++){
+    recipeEl.addEventListener("click", (event) => {
+        if(event.target === images[i]){
+            const divEl =  event.target.parentElement;
+            images[i].style.transform = "rotateY(180deg)";
+            setTimeout(()=> {
+                event.target.parentElement.innerHTML = "";
+                const h2El = document.createElement("h2");
+                h2El.textContent = data[i].name;
+                divEl.append(h2El)
+                const pEl =  document.createElement("a");
+                //pEl.textContent = data[i].description;
+                pEl.setAttribute('href', data[i].description);
+                divEl.append(pEl)
+                divEl.style.background = "white";
+            }, 2000)
+            
         
     
+        }
+    })
 
-    }
-})
+}
+
+       
 
 const buttonEl = document.getElementById('button');
 const buttonMessage = document.getElementById('message');
