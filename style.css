@@ -5,13 +5,7 @@ body{
 #headline-body{
     background-color: plum;
 }
-/* #menu{ */
-    /* background-color: palevioletred; */
-    /* display: flex; */
-    /* justify-content: space-around; */
-    /* align-items: center; */
-    
-/* } */
+
 #about-us{
     background-color: plum;
     margin: 0%;
@@ -45,7 +39,7 @@ body{
 }
 
 .img {
-    /* background-color: white; */
+    
     width: 300px;
     height: 300px;
 }
